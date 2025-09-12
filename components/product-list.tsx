@@ -1,7 +1,7 @@
 "use client";
 
 import Stripe from "stripe";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ProductCard } from "./product-card";
 
 interface Props {
@@ -10,6 +10,12 @@ interface Props {
 
 export const ProductList = ({ products }: Props) => {
   const [searchTerm, setSearchTerm] = useState<string>("");
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => setLoading(false), 1000);
+    return () => clearTimeout(timeout);
+  }, []);
 
   const filteredProduct = products.filter((product) => {
     const term = searchTerm.toLowerCase();
@@ -17,7 +23,6 @@ export const ProductList = ({ products }: Props) => {
     const descriptionMatch = product.description
       ? product.description.toLowerCase().includes(term)
       : false;
-
     return nameMatch || descriptionMatch;
   });
 
@@ -34,14 +39,17 @@ export const ProductList = ({ products }: Props) => {
       </div>
 
       <ul className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {filteredProduct.map((product, key) => {
-          return (
-            <li key={key}>
-              {" "}
-              <ProductCard product={product} />
-            </li>
-          );
-        })}
+        {loading
+          ? Array.from({ length: 6 }).map((_, i) => (
+              <li key={i}>
+                <ProductCard loading />
+              </li>
+            ))
+          : filteredProduct.map((product, key) => (
+              <li key={key}>
+                <ProductCard product={product} />
+              </li>
+            ))}
       </ul>
     </div>
   );

@@ -12,7 +12,7 @@ export default async function ProductPage() {
       <Navbar />
 
       <div className="pb-8 mt-28 p-4 max-w-7xl mx-auto">
-        <h1 className="lg:text-3xl text-xl font-bold leading-none tracking-tight text-foreground text-center mb-8">
+        <h1 className="lg:text-3xl text-xl font-bold leading-none tracking-tight text-foreground text-center mb-8 text-[#134272]">
           All Products
         </h1>
         <ProductList products={products.data} />

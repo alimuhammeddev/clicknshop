@@ -6,7 +6,6 @@ export default function SignUp() {
     <div className="min-h-screen flex items-center justify-center px-4">
       <div className="w-full max-w-md bg-white rounded-2xl shadow-lg p-8">
         
-        {/* Logo */}
         <div className="flex justify-center">
           <Image 
             src="/clicknshop.png"
@@ -17,14 +16,11 @@ export default function SignUp() {
           />
         </div>
 
-        {/* Heading */}
         <h2 className="text-xl font-medium text-center text-[#1c4880] mb-6">
           Create your Account
         </h2>
 
-        {/* Form */}
         <form className="space-y-5">
-          {/* Name */}
           <div>
             <label className="block text-gray-700 mb-1">Full Name</label>
             <input 
@@ -35,7 +31,6 @@ export default function SignUp() {
             />
           </div>
 
-          {/* Email */}
           <div>
             <label className="block text-gray-700 mb-1">Email</label>
             <input 
@@ -46,7 +41,6 @@ export default function SignUp() {
             />
           </div>
 
-          {/* Password */}
           <div>
             <label className="block text-gray-700 mb-1">Password</label>
             <input 
@@ -57,7 +51,6 @@ export default function SignUp() {
             />
           </div>
 
-          {/* Confirm Password */}
           <div>
             <label className="block text-gray-700 mb-1">Confirm Password</label>
             <input 
@@ -69,7 +62,6 @@ export default function SignUp() {
           </div>
 
           <div className="w-full max-w-sm mx-auto">
-            {/* Button */}
             <Link
               href="/home"
               className="block w-full bg-[#1c4880] text-white py-2 rounded-lg text-center cursor-pointer"
@@ -79,7 +71,6 @@ export default function SignUp() {
           </div>
         </form>
 
-        {/* Footer */}
         <p className="text-center text-sm text-gray-600 mt-6">
           Already have an account?{" "}
           <Link href="/" className="text-[#1c4880] font-medium hover:underline">
