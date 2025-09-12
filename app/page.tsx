@@ -1,95 +1,72 @@
 import Image from "next/image";
-import styles from "./page.module.css";
+import Link from "next/link";
 
-export default function Home() {
+export default function Login() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+    <div className="min-h-screen flex items-center justify-center px-4">
+      <div className="w-full max-w-md bg-white rounded-2xl shadow-lg p-8">
+        {/* Logo */}
+        <div className="flex justify-center">
+          <Image
+            src="/clicknshop.png"
+            alt="ClicknShop Logo"
+            width={80}
+            height={80}
+            priority
+          />
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+        {/* Heading */}
+        <h2 className="text-xl font-medium text-center text-[#1c4880] mb-6">
+          Login to ClickNShop
+        </h2>
+
+        {/* Form */}
+        <form className="space-y-5">
+          {/* Email */}
+          <div>
+            <label className="block text-gray-700 mb-1">Email</label>
+            <input
+              type="email"
+              placeholder="Enter your email"
+              className="w-full px-4 py-2 border rounded-lg focus:ring-1 focus:ring-[#1c4880] focus:outline-none border-[#1c4880]"
+              required
+            />
+          </div>
+
+          {/* Password */}
+          <div>
+            <label className="block text-gray-700 mb-1">Password</label>
+            <input
+              type="password"
+              placeholder="Enter your password"
+              className="w-full px-4 py-2 border rounded-lg focus:ring-1 focus:ring-[#1c4880] focus:outline-none border-[#1c4880]"
+              required
+            />
+          </div>
+
+          <div className="w-full max-w-sm mx-auto">
+            {/* Button */}
+            <Link
+              href="/home"
+              className="block w-full bg-[#1c4880] text-white py-2 rounded-lg text-center cursor-pointer"
+            >
+              Login
+            </Link>
+          </div>
+        </form>
+
+        {/* Footer */}
+        <p className="text-center text-sm text-gray-600 mt-6">
+          Don’t have an account?{" "}
+          <Link
+            href="/signup"
+            className="text-[#1c4880] font-medium hover:underline"
+          >
+            Sign up
+          </Link>
+        </p>
+      </div>
     </div>
   );
 }
