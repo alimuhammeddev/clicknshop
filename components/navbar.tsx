@@ -4,9 +4,12 @@ import { useState } from "react";
 import { ShoppingCart, Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useCartStore } from "@/store/cart-store";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { items } = useCartStore();
+  const cartCount = items.reduce((acc, item) => acc + item.quantity, 0);
 
   return (
     <nav className="w-full bg-white shadow-md fixed top-0 z-50">
@@ -29,12 +32,13 @@ export const Navbar = () => {
 
         {/* Cart + Mobile Menu Button */}
         <div className="flex items-center space-x-4">
-          <Link href="" className="relative">
+          <Link href="/checkout" className="relative">
             <ShoppingCart className="w-6 h-6 text-gray-800" />
-            {/* Badge */}
-            <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
-              3
-            </span>
+            {cartCount > 0 && (
+              <span className="absolute -top-2 -right-2 flex h-5 w-5 items-center justify-center rounded-full bg-red-500 text-xs text-white">
+                {cartCount}
+              </span>
+            )}
           </Link>
 
           {/* Mobile Menu Button */}

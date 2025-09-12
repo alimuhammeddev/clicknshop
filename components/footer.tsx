@@ -31,11 +31,11 @@ export default function Footer() {
             <input
               type="email"
               placeholder="Enter your email"
-              className="w-full px-3 py-2 rounded-l-md focus:outline-white border border-white text-gray-100 placeholder:text-gray-100"
+              className="w-full px-3 py-2 rounded-l-md focus:outline-1 focus:outline-white border border-white text-gray-100 placeholder:text-gray-100"
             />
             <button
               type="submit"
-              className="bg-gray-100 hover:bg-gray-50 cursor-pointer px-4 rounded-r-md text-black"
+              className="bg-gray-100 hover:bg-gray-50 cursor-pointer px-4 rounded-r-md text-black font-medium"
             >
               Subscribe
             </button>
