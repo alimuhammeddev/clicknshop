@@ -14,11 +14,11 @@ export default async function CTA() {
             Enjoy a seamless shopping experience with fast delivery and
             top-notch customer support. Your style, just a click away.
           </p>
-          <Button className="bg-black text-white mt-4 px-6 py-3 rounded-md">
+          <Button className="bg-[#134272] text-white mt-4 px-6 py-3 rounded-md">
             <Link href="/product">Get Started</Link>
           </Button>
         </div>
-        <Image src="/cta.jpg" alt="cta-image" width={400} height={400}/>
+        <Image src="/cta.jpg" alt="cta-image" width={400} height={400} />
       </div>
     </div>
   );

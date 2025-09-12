@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#1c4880] text-gray-300 py-8 mt-10">
+    <footer className="bg-[#134272] text-gray-300 py-8 mt-10">
       <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
         
         <div>
@@ -44,7 +44,7 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-white mt-8 pt-4 text-center text-sm">
-        © {new Date().getFullYear()} ClickNShop. All rights reserved.
+        © 2025 ClickNShop. All rights reserved.
       </div>
     </footer>
   );

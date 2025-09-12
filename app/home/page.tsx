@@ -19,7 +19,7 @@ export default async function Home() {
         <div className="mx-auto grid grid-cols-1 items-center justify-items-center gap-8 md:grid-cols-2">
           <div className="space-y-4">
             <h2 className="lg:text-3xl text-xl font-bold tracking-tight md:text-4xl">
-              Welcome to ClickNShop
+              Welcome to <span className="text-[#134272]">ClickNShop</span>
             </h2>
             <p className="text-neutral-600">
               Explore a wide variety of clothing, shoes, and accessories
@@ -31,7 +31,7 @@ export default async function Home() {
 
             <Button
               variant="default"
-              className="inline-flex items-center justify-center rounded-md px-6 py-5 bg-black text-white"
+              className="inline-flex items-center justify-center rounded-md px-6 py-5 bg-[#134272] text-white"
             >
               <Link
                 href="/product"

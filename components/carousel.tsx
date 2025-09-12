@@ -18,9 +18,9 @@ export const Carousel = ({ products }: Props) => {
   return (
     <section>
       <div>
-        <h1 className="text-center lg:text-3xl text-2xl font-semibold mb-3">Our Products</h1>
+        <h1 className="text-center lg:text-3xl text-2xl font-semibold mb-3">Our Featured Products</h1>
       </div>
-      <div className="max-w-7xl mx-auto lg:px-0 px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {firstThree.map((product) => {
           const price = product.default_price as Stripe.Price;
 
@@ -34,8 +34,8 @@ export const Carousel = ({ products }: Props) => {
                   <Image
                     alt={product.name}
                     src={product.images[0]}
-                    fill
                     className="object-cover"
+                    layout="fill"
                   />
                 </div>
               )}
@@ -45,7 +45,7 @@ export const Carousel = ({ products }: Props) => {
                   {product.name}
                 </CardTitle>
                 {price && price.unit_amount && (
-                  <p className="text-lg font-medium text-[#1c4880]">
+                  <p className="text-lg font-medium text-[#134272]">
                     ${(price.unit_amount / 100).toFixed(2)}
                   </p>
                 )}

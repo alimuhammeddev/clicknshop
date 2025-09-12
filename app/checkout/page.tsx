@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useCartStore } from "@/store/cart-store";
 import { checkoutAction } from "./checkout-action";
-import { Navbar } from "@/components/navbar";
 
 export default function CheckoutPage() {
   const { items, removeItem, addItem } = useCartStore();
@@ -15,12 +14,9 @@ export default function CheckoutPage() {
 
   if (items.length === 0) {
     return (
-      <section>
-        <Navbar />
-        <div className="container mx-auto px-4 py-8 text-center mt-24">
-          <h1 className="lg:text-3xl text-xl font-bold mb-4">Your Cart is Empty</h1>
-        </div>
-      </section>
+      <div className="container mx-auto px-4 py-8 text-center">
+        <h1 className="text-3xl font-bold mb-4">Your Cart is Empty</h1>
+      </div>
     );
   }
 
