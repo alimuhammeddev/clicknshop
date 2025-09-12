@@ -11,6 +11,9 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   title: "ClickNShop",
   description: "ClickNShop E-commerce Application",
+  icons: {
+    icon: "/clicknshop.png",
+  },
 };
 
 export default function RootLayout({
