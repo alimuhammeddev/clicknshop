@@ -19,7 +19,7 @@ export default function CheckoutPage() {
       <section>
         <Navbar />
         <div className="container mx-auto px-4 py-8 text-center mt-48">
-          <h1 className="lg:text-3xl text-xl font-bold mb-4">
+          <h1 className="lg:text-2xl text-xl font-semibold">
             Your Cart is Empty
           </h1>
           <p className="text-muted-foreground">
@@ -34,13 +34,13 @@ export default function CheckoutPage() {
     <section>
       <Navbar />
       <div className="container mx-auto px-4 py-12 mt-12">
-        <h1 className="lg:text-2xl text-xl font-bold mb-5 text-center text-[#134272]">
+        <h1 className="lg:text-2xl text-xl font-medium mb-5 text-center text-[#134272]">
           🛒 Checkout
         </h1>
 
         <Card className="max-w-7xl mx-auto mb-8 shadow-xl rounded-2xl">
           <CardHeader className="border-b pb-4">
-            <CardTitle className="lg:text-xl font-bold text-[#134272]">
+            <CardTitle className="lg:text-xl text-lg font-medium text-[#134272]">
               Order Summary
             </CardTitle>
           </CardHeader>
@@ -74,7 +74,7 @@ export default function CheckoutPage() {
                       >
                         –
                       </Button>
-                      <span className="text-lg font-semibold text-[#134272]">
+                      <span className="text-lg font-medium text-[#134272]">
                         {item.quantity}
                       </span>
                       <Button
@@ -86,7 +86,7 @@ export default function CheckoutPage() {
                         +
                       </Button>
                     </div>
-                    <span className="font-semibold text-[#134272]">
+                    <span className="font-medium text-[#134272]">
                       ${((item.price * item.quantity) / 100).toFixed(2)}
                     </span>
                   </div>
@@ -94,7 +94,7 @@ export default function CheckoutPage() {
               ))}
             </ul>
 
-            <div className="mt-6 border-t pt-4 text-xl font-bold flex justify-between">
+            <div className="mt-6 border-t pt-4 text-xl font-medium flex justify-between">
               <span className="text-[#134272]">Total</span>
               <span className="text-[#134272]">
                 ${(total / 100).toFixed(2)}

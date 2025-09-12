@@ -10,7 +10,7 @@ export default function AboutPage() {
       <div className="max-w-6xl mx-auto px-6 py-16 mt-10">
         {/* Page Heading */}
         <div className="text-center mb-10">
-          <h1 className="lg:text-2xl font-bold text-gray-800 mb-2">
+          <h1 className="lg:text-2xl text-xl font-bold text-gray-800 mb-2">
             About <span className="text-[#1c4880]">ClickNShop</span>
           </h1>
           <p className="text-gray-600 max-w-2xl mx-auto">
@@ -22,7 +22,7 @@ export default function AboutPage() {
 
         <div className="grid md:grid-cols-2 gap-12 mb-10">
           <div>
-            <h2 className="lg:text-xl font-medium text-gray-800 mb-2">
+            <h2 className="lg:text-xl text-lg font-medium text-gray-800 mb-2">
               Our Mission
             </h2>
             <p className="text-gray-600 leading-relaxed">
@@ -34,7 +34,7 @@ export default function AboutPage() {
           </div>
 
           <div>
-            <h2 className="lg:text-xl font-medium text-gray-800 mb-2">
+            <h2 className="lg:text-xl text-lg font-medium text-gray-800 mb-2">
               Our Vision
             </h2>
             <p className="text-gray-600 leading-relaxed">
@@ -46,7 +46,7 @@ export default function AboutPage() {
         </div>
 
         <div className="mb-10">
-          <h2 className="lg:text-2xl font-medium text-gray-800 text-center mb-4">
+          <h2 className="lg:text-2xl text-lg font-medium text-gray-800 text-center mb-4">
             What We Stand For
           </h2>
           <div className="grid md:grid-cols-3 gap-5 text-center">
@@ -72,9 +72,8 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* Call to Action */}
         <div className="text-center">
-          <h2 className="text-2xl font-semibold text-gray-800">
+          <h2 className="lg:text-2xl text-lg font-medium text-gray-800">
             Ready to Shop with Us?
           </h2>
           <p className="text-gray-600 mb-3">

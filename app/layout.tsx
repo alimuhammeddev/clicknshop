@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Roboto } from "next/font/google";
+import { Montserrat, } from "next/font/google";
 
-const roboto = Roboto({
+const montserrat = Montserrat({
   subsets: ["latin"],
   weight: ["400", "700"], // choose the weights you need
 });
@@ -19,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={roboto.className}>
+    <html lang="en" className={montserrat.className}>
       <body className="flex min-h-full flex-col bg-white">
         <main>
           {children}

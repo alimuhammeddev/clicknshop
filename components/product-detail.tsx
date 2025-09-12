@@ -52,7 +52,7 @@ export const ProductDetail = ({ product, loading }: Props) => {
   return (
     <section>
       <Navbar />
-      <div className="container mx-auto max-w-7xl px-4 py-8 flex flex-col md:flex-row gap-8 lg:items-center mt-28">
+      <div className="container mx-auto max-w-7xl px-4 py-8 flex flex-col md:flex-row gap-8 lg:items-center mt-20">
         {product.images && product.images[0] && (
           <div className="relative h-96 w-full md:w-1/2 rounded-lg overflow-hidden">
             <Image
