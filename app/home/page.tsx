@@ -17,8 +17,8 @@ export default async function Home() {
 
       <div className="flex-grow container mx-auto px-4 py-8 mt-24 max-w-7xl">
         <div className="mx-auto grid grid-cols-1 items-center justify-items-center gap-8 md:grid-cols-2">
-          <div className="space-y-4">
-            <h2 className="lg:text-3xl text-xl font-bold tracking-tight md:text-4xl">
+          <div className="space-y-2">
+            <h2 className="lg:text-2xl text-xl font-bold tracking-tight md:text-4xl">
               Welcome to <span className="text-[#134272]">ClickNShop</span>
             </h2>
             <p className="text-neutral-600">

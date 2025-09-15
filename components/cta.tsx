@@ -7,7 +7,7 @@ export default async function CTA() {
     <div className="bg-[#F8F8F8] max-w-7xl mx-auto mt-5">
       <div className="flex lg:flex-row flex-col items-center justify-between p-4 gap-8">
         <div>
-          <h1 className="text-black text-2xl font-bold">ClickNShop</h1>
+          <h1 className="text-[#134272] lg:text-2xl text-lg font-bold">ClickNShop</h1>
           <p className="text-gray-700 mt-2">
             Discover the easiest way to shop online. At ClickNShop, we bring you
             the latest fashion, shoes, and accessories all at unbeatable prices.

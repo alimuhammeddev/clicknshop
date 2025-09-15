@@ -18,7 +18,7 @@ export const Carousel = ({ products }: Props) => {
   return (
     <section>
       <div>
-        <h1 className="text-center lg:text-3xl text-2xl font-semibold mb-3">Our Featured Products</h1>
+        <h1 className="text-center lg:text-xl text-lg font-semibold mb-3 text-[#134272]">Our Featured Products</h1>
       </div>
       <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {firstThree.map((product) => {
@@ -41,11 +41,11 @@ export const Carousel = ({ products }: Props) => {
               )}
 
               <CardContent className="p-4 text-center">
-                <CardTitle className="text-xl font-semibold mb-2">
+                <CardTitle className="lg:text-lg font-semibold mb-2">
                   {product.name}
                 </CardTitle>
                 {price && price.unit_amount && (
-                  <p className="text-lg font-medium text-[#134272]">
+                  <p className="lg:text-lg font-medium text-[#134272]">
                     ${(price.unit_amount / 100).toFixed(2)}
                   </p>
                 )}

@@ -7,15 +7,15 @@ export default function AboutPage() {
     <section className="min-h-screen bg-gray-50">
       <Navbar />
 
-      <div className="max-w-6xl mx-auto px-6 py-16 mt-10">
+      <div className="max-w-7xl mx-auto px-6 py-16 mt-10">
         {/* Page Heading */}
         <div className="text-center mb-10">
-          <h1 className="lg:text-2xl text-xl font-bold text-gray-800 mb-2">
+          <h1 className="lg:text-xl text-lg font-bold text-gray-800 mb-2">
             About <span className="text-[#1c4880]">ClickNShop</span>
           </h1>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Your one-stop online store for fashion, shoes, and lifestyle
-            essentials. At ClickNShop, we believe shopping should be simple,
+            essentials. At <span className="text-[#1c4880]">ClickNShop</span>, we believe shopping should be simple,
             fun, and affordable.
           </p>
         </div>
@@ -46,7 +46,7 @@ export default function AboutPage() {
         </div>
 
         <div className="mb-10">
-          <h2 className="lg:text-2xl text-lg font-medium text-gray-800 text-center mb-4">
+          <h2 className="lg:text-xl text-lg font-medium text-gray-800 text-center mb-4">
             What We Stand For
           </h2>
           <div className="grid md:grid-cols-3 gap-5 text-center">
@@ -73,7 +73,7 @@ export default function AboutPage() {
         </div>
 
         <div className="text-center">
-          <h2 className="lg:text-2xl text-lg font-medium text-gray-800">
+          <h2 className="lg:text-xl text-lg font-medium text-gray-800">
             Ready to Shop with Us?
           </h2>
           <p className="text-gray-600 mb-3">
@@ -82,7 +82,7 @@ export default function AboutPage() {
           </p>
           <Link
             href="/product"
-            className="inline-block px-6 py-3 bg-[#1c4880] text-white rounded-md"
+            className="inline-block px-5 py-2 bg-[#1c4880] text-white rounded-md"
           >
             Start Shopping
           </Link>
