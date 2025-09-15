@@ -16,7 +16,7 @@ export default function SuccessPage() {
     <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-green-50 to-white px-4">
       <div className="bg-white shadow-lg rounded-2xl p-8 max-w-md w-full text-center border-t-4 border-[#134272]">
         <CheckCircle2 className="w-16 h-16 text-[#134272] mx-auto mb-4 animate-bounce" />
-        <h1 className="text-3xl font-semibold text-gray-800 mb-2">
+        <h1 className="lg:text-3xl text-xl font-semibold text-gray-800 mb-2">
           Payment Successful 🎉
         </h1>
         <p className="text-gray-600 mb-6">
@@ -25,7 +25,7 @@ export default function SuccessPage() {
         </p>
         <Link
           href="/product"
-          className="inline-block bg-[#134272] text-white px-6 py-3 rounded-full font-semibold shadow transition-transform hover:scale-100"
+          className="inline-block bg-[#134272] text-white px-6 py-3 rounded-full font-medium shadow transition-transform hover:scale-100"
         >
           Continue Shopping
         </Link>

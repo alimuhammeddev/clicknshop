@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
         
         <div>
-          <h2 className="text-xl font-bold text-white">ClickNShop</h2>
+          <h2 className="lg:text-xl font-medium text-white">ClickNShop</h2>
           <p className="mt-2 text-sm">
             Your one-stop shop for fashion, shoes, and accessories. 
             We deliver quality at the best price.
@@ -16,7 +16,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <h3 className="text-lg font-semibold text-white">Quick Links</h3>
+          <h3 className="lg:text-xl font-medium text-white">Quick Links</h3>
           <ul className="mt-3 space-y-2 text-sm">
             <li><Link href="/home" className="hover:text-white">Home</Link></li>
             <li><Link href="/product" className="hover:text-white">Product</Link></li>
@@ -25,7 +25,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <h3 className="text-lg font-semibold text-white">Stay Updated</h3>
+          <h3 className="lg:text-xl font-medium text-white">Stay Updated</h3>
           <p className="mt-2 text-sm">Subscribe to our newsletter for the latest offers.</p>
           <form className="mt-4 flex">
             <input

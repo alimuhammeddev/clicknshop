@@ -64,7 +64,7 @@ export const ProductDetail = ({ product, loading }: Props) => {
           </div>
         )}
         <div className="md:w-1/2">
-          <h1 className="lg:text-3xl text-xl font-bold mb-4">{product.name}</h1>
+          <h1 className="lg:text-2xl text-lg font-bold mb-4">{product.name}</h1>
           {product.description && (
             <p className="text-gray-700 mb-4">{product.description}</p>
           )}
