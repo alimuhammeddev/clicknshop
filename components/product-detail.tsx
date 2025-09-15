@@ -90,7 +90,7 @@ export const ProductDetail = ({ product, loading }: Props) => {
               >
                 –
               </Button>
-              <span className="text-lg font-semibold">{quantity}</span>
+              <span className="text-lg font-medium">{quantity}</span>
               <Button
                 variant="outline"
                 className="bg-[#134272] text-white"

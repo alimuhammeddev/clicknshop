@@ -94,7 +94,7 @@ export default function CheckoutPage() {
               ))}
             </ul>
 
-            <div className="mt-6 border-t pt-4 text-xl font-medium flex justify-between">
+            <div className="mt-6 border-t pt-4 lg:text-xl font-medium flex justify-between">
               <span className="text-[#134272]">Total</span>
               <span className="text-[#134272]">
                 ${(total / 100).toFixed(2)}
@@ -107,7 +107,7 @@ export default function CheckoutPage() {
           <input type="hidden" name="items" value={JSON.stringify(items)} />
           <Button
             type="submit"
-            className="w-full py-6 text-lg rounded-md shadow-lg bg-[#1f5a91] text-white cursor-pointer hover:opacity-90 transition"
+            className="w-full py-6 lg:text-lg rounded-md shadow-lg bg-[#1f5a91] text-white cursor-pointer hover:opacity-90 transition"
           >
             Proceed to Payment
           </Button>
