@@ -61,7 +61,7 @@ export default function CheckoutPage() {
                         className="object-cover"
                       />
                     </div>
-                    <span className="font-medium text-lg text-[#134272]">{item.name}</span>
+                    <span className="font-medium lg:text-lg text-[#134272]">{item.name}</span>
                   </div>
 
                   <div className="flex flex-col items-end gap-2">
