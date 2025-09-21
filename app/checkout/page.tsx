@@ -70,7 +70,7 @@ export default function CheckoutPage() {
                         variant="outline"
                         size="sm"
                         onClick={() => removeItem(item.id)}
-                        className="bg-[#134272] text-white"
+                        className="bg-[#134272] text-white cursor-pointer"
                       >
                         –
                       </Button>
@@ -81,7 +81,7 @@ export default function CheckoutPage() {
                         variant="outline"
                         size="sm"
                         onClick={() => addItem({ ...item, quantity: 1 })}
-                        className="bg-[#134272] text-white"
+                        className="bg-[#134272] text-white cursor-pointer"
                       >
                         +
                       </Button>

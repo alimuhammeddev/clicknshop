@@ -76,7 +76,7 @@ export const ProductDetail = ({ product, loading }: Props) => {
 
           {quantity === 0 ? (
             <Button
-              className="bg-[#134272] text-white mt-4 w-full md:w-auto"
+              className="bg-[#134272] text-white mt-4 w-full md:w-auto cursor-pointer"
               onClick={onAddItem}
             >
               <ShoppingCart className="mr-2" /> Add to Cart
@@ -85,7 +85,7 @@ export const ProductDetail = ({ product, loading }: Props) => {
             <div className="flex items-center space-x-4 mt-4">
               <Button
                 variant="outline"
-                className="bg-[#134272] text-white"
+                className="bg-[#134272] text-white cursor-pointer"
                 onClick={() => removeItem(product.id)}
               >
                 –
@@ -93,7 +93,7 @@ export const ProductDetail = ({ product, loading }: Props) => {
               <span className="text-lg font-medium">{quantity}</span>
               <Button
                 variant="outline"
-                className="bg-[#134272] text-white"
+                className="bg-[#134272] text-white cursor-pointer"
                 onClick={onAddItem}
               >
                 +
