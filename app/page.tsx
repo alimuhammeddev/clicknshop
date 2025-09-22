@@ -17,8 +17,8 @@ export default function Login() {
     setError("");
     setLoading(true);
 
-    // Get stored user from localStorage
-    const storedUser = JSON.parse(localStorage.getItem("user"));
+    const userData = localStorage.getItem("user");
+    const storedUser = userData ? JSON.parse(userData) : null;
 
     if (!storedUser) {
       setError("No account found. Please sign up first.");
@@ -27,13 +27,8 @@ export default function Login() {
     }
 
     if (storedUser.email === email && storedUser.password === password) {
-      // Save login state
       localStorage.setItem("isLoggedIn", "true");
-
-      // Redirect
-      setTimeout(() => {
-        router.push("/home");
-      }, 1000); // keep small delay so spinner shows briefly
+      setTimeout(() => router.push("/home"), 1000);
     } else {
       setError("Invalid email or password.");
       setLoading(false);
