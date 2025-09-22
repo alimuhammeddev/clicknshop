@@ -1,5 +1,6 @@
 "use client";
 
+import { useTransition } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useCartStore } from "@/store/cart-store";
@@ -13,6 +14,9 @@ export default function CheckoutPage() {
     (acc, item) => acc + item.price * item.quantity,
     0
   );
+
+  // 🔥 Add loader state using useTransition
+  const [isPending, startTransition] = useTransition();
 
   if (items.length === 0) {
     return (
@@ -51,7 +55,6 @@ export default function CheckoutPage() {
                   key={item.id}
                   className="flex items-center justify-between gap-4 border-b pb-4"
                 >
-
                   <div className="flex items-center gap-4">
                     <div className="relative w-16 h-16 rounded-sm overflow-hidden shadow-sm">
                       <Image
@@ -61,7 +64,9 @@ export default function CheckoutPage() {
                         className="object-cover"
                       />
                     </div>
-                    <span className="font-medium lg:text-lg text-[#134272]">{item.name}</span>
+                    <span className="font-medium lg:text-lg text-[#134272]">
+                      {item.name}
+                    </span>
                   </div>
 
                   <div className="flex flex-col items-end gap-2">
@@ -103,13 +108,27 @@ export default function CheckoutPage() {
           </CardContent>
         </Card>
 
-        <form action={checkoutAction} className="max-w-7xl mx-auto">
+        {/* ✅ Loader logic */}
+        <form
+          action={(formData) => {
+            startTransition(() => checkoutAction(formData));
+          }}
+          className="max-w-7xl mx-auto"
+        >
           <input type="hidden" name="items" value={JSON.stringify(items)} />
           <Button
             type="submit"
-            className="w-full py-6 lg:text-lg rounded-md shadow-lg bg-[#1f5a91] text-white cursor-pointer hover:opacity-90 transition"
+            disabled={isPending}
+            className="w-full py-6 lg:text-lg rounded-md shadow-lg bg-[#1f5a91] text-white cursor-pointer hover:opacity-90 transition flex items-center justify-center gap-2"
           >
-            Proceed to Payment
+            {isPending ? (
+              <>
+                <span className="animate-spin border-2 border-white border-t-transparent rounded-full w-5 h-5"></span>
+                Processing...
+              </>
+            ) : (
+              "Proceed to Payment"
+            )}
           </Button>
         </form>
       </div>
