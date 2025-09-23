@@ -1,19 +1,21 @@
 "use client";
 
 import { useState } from "react";
-import { ShoppingCart, Menu, X } from "lucide-react";
+import { ShoppingCart, Menu, X, User } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useCartStore } from "@/store/cart-store";
+import { ProfileDropdown } from "./profile-dropdown";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isProfileOpen, setIsProfileOpen] = useState(false);
   const { items } = useCartStore();
   const cartCount = items.reduce((acc, item) => acc + item.quantity, 0);
 
   return (
     <nav className="w-full bg-white shadow-md fixed top-0 z-50">
-      <div className= "w-full flex container mx-auto max-w-7xl items-center justify-between px-4 py-3">
+      <div className="w-full flex container mx-auto max-w-7xl items-center justify-between px-4 py-3">
         {/* Logo */}
         <Image
           src="/clicknshop.png"
@@ -30,8 +32,8 @@ export const Navbar = () => {
           <Link href="/about" className="hover:text-[#1c4880] cursor-pointer">About</Link>
         </div>
 
-        {/* Cart + Mobile Menu Button */}
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center space-x-4 relative">
+          {/* Cart */}
           <Link href="/checkout" className="relative">
             <ShoppingCart className="w-6 h-6 text-gray-800" />
             {cartCount > 0 && (
@@ -40,6 +42,19 @@ export const Navbar = () => {
               </span>
             )}
           </Link>
+
+          {/* Profile */}
+          <div className="relative">
+            <button
+              onClick={() => setIsProfileOpen(!isProfileOpen)}
+              className="focus:outline-none"
+              aria-label="Profile menu"
+            >
+              <User className="w-6 h-6 text-gray-800 mt-2 cursor-pointer" />
+            </button>
+
+            {isProfileOpen && <ProfileDropdown />}
+          </div>
 
           {/* Mobile Menu Button */}
           <button
